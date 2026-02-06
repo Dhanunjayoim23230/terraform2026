@@ -1,12 +1,12 @@
 resource "aws_instance" "ec2" {
   
-  #count=3
-  count=length(var.tags)
+  count=3
+  #count=length(var.tags)
   ami                    = var.ami_id
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   instance_type          = var.instance_type
   tags = {
-    Name=var.tags[count.index]
+    Name=var.ec2_tags[count.index]
     }
 
 }

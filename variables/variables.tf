@@ -11,10 +11,28 @@ variable "instance_type" {
   
 }
 
-variable "tags" {
-    default= "terraform_variable_practice"
-
+variable "ec2_tags" {
+    default= {
+        Name="terraform_variable_practice"
+    }
 }
+
+variable "from_port" {
+    type = number
+    default = "22"
+}
+
+variable "to_port" {
+    type = number
+    default = "22"
+}
+
+variable "cidr_blocks" {
+    type = list(string)
+    default = [ "0.0.0.0/0" ]
+  
+}
+
 
 # 1.command line -var "<variable_name>= <variable_value>"
 # terraform apply -auto-approve -var "instance_type=t3.micro"

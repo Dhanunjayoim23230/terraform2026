@@ -11,11 +11,15 @@ variable "instance_type" {
   
 }
 
-variable "tags" {
-    default= ["mysql", "backend", "frontend","ansible"]
+variable "ec2_tags" {
+    default= ["mysql", "backend", "frontend"]
 
+}
+variable "domain"{
+    default = "vrushali.online"
 }
 
 #mysql
 #backend
 #frontend
+#mysql.vrusahli.online
