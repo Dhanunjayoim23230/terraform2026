@@ -1,7 +1,12 @@
-variable "instance_type"{
-    default= {
-        mysql="t3.micro"
-        backend= "t3.large"
-        frontend= "t3.samll"
-    }
+variable "instance" {
+  default = {
+    mysql    = "t3.micro"
+    backend  = "t3.micro"
+    frontend = "t3.small"
+  }
 }
+
+# variable "mysq"{
+
+# }
+  
